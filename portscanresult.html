@@ -1,0 +1,27 @@
+{% extends 'main.html' %}
+{% block content %}
+{% load static %}
+
+<div class="container">
+    <div class="row">
+        <div class="col-3"></div>
+        <div class="col-6 text-center p-2 ">
+            <h1 style="color: purple; font-family: 'Arial black';"><b>PORT SCAN</b></h1>
+            <br> <br> 
+
+        </div>
+        <div class="col-3"> </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-12 text-center">
+        <h3>Entered Website: &nbsp;{{target}}</h3> <br>
+        <h3>Entered Port No: &nbsp; {{port}}</h3> <br>
+        <h1 style="color: purple"><b>{{msg}} </b></h1> <br>
+        <p style="color: green;">{{rest}}</p>
+    </div>
+</div>
+
+
+
+{% endblock %}

@@ -1,0 +1,57 @@
+{% extends 'main.html' %}
+{% block content %}
+
+{% load static %}
+
+
+<link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
+<link rel="stylesheet" type="text/css" href="{%static 'icofont/icofont.min.css'%}">
+
+<div class="container-fluid">
+    <div class="container">
+        <div class="row pt-5">
+            <div class="col-2"></div>
+            <div class="col-3 p-5 text-center" style="background: linear-gradient(to left,purple,black)">
+                <img src={%static "images/user_profile.png" %} height="80px" class="rounded-circle">
+                <h1 class="text-light"> User Name </h1><br> <br> <br> <br>
+                <p class="text-center text-light">Edit</p>
+                <a href="{% url 'Editprofile' %}"><i class="icofont-edit  p-2 rounded-circle text-end text-light"></i></a>
+            </div>
+            <div class="col-5 bg-dark text-light p-5">
+                <h5 class="text-light">Information</h5> <hr>
+                <div class="row">
+                    <div class="col-6">
+                        User Name: <br>
+                        Email: <br>
+                        Phone Number: <br>
+                        DOB: <br>
+                        Gender: <br>
+                        City: <br>
+                        State: <br>
+                    </div>
+                    <div class="col-6">
+                        {{user.name}}<br>
+                        {{user.email}}<br>
+                        {{user.phone}}<br>
+                        {{user.dob}}<br>
+                        {{user.gender}}<br>
+                        {{user.city}}<br>
+                        {{user.state}}<br>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 p-5 text-center">
+                        <i class="icofont-facebook border p-2 rounded-circle bg-dark text-light"> </i>&nbsp;
+			            <i class="icofont-email border p-2 rounded-circle bg-dark text-light"></i>&nbsp;
+			            <i class="icofont-instagram border p-2 rounded-circle bg-dark text-light "> </i>&nbsp;
+                    </div>
+                </div>
+                
+    </div>
+    <div class="col-2"></div>
+</div>
+</div>
+</div>
+
+{% endblock %}
+

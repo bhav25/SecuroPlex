@@ -1,0 +1,106 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+
+	<div class="row p-5 bg-light">
+		<div class="col-4"></div>
+		<div class="col-4 p-5">
+			<h1 class="text-center"><b>More Services</b></h1>
+			<br>
+			<p class="text-center"> Home > More Services </p>
+		</div>
+		<div class="col-4"></div>
+	</div>
+
+	<br> <br><br>
+        <div class="container">
+		<div class="row">
+			<div class="col-4 shadow-lg p-3 mb-5 bg-body rounded">
+				<div class="card rounded" style="width: 22rem;">
+                    <img src={% static "images\services1.jpg" %} class="card-img-top" alt="...">
+                    <div class="card-body">
+                    <h5 class="card-title text-center"><b>Application Security</b></h5>
+                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis</p>
+                    
+                    <p class="text-danger"><u>Read More></u></p>
+                	</div>
+                </div>
+            </div>
+            <div class="col-4 shadow-lg p-3 mb-5 bg-body rounded">
+				<div class="card rounded" style="width: 22rem;">
+                    <img src={% static "images\services2.jpg" %} class="card-img-top" alt="...">
+                    <div class="card-body">
+                    <h5 class="card-title text-center"><b>Cloud Security</b></h5>
+                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do etempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis.</p>
+                    <p class="text-danger"><u>Read More></u></p>
+                	</div>
+            	</div>
+        	</div>
+        	<div class="col-4 shadow-lg p-3 mb-5 bg-body rounded">
+				<div class="card rounded" style="width: 22rem;">
+                    <img src={% static "images\services3.jpg" %} class="card-img-top" alt="...">
+                    <div class="card-body">
+                    <h5 class="card-title text-center"><b>Infrastructure Security</b></h5>
+                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis.</p>
+                    <p class="text-danger"><u>Read More></u></p>
+                	</div>
+                </div>
+            </div>
+            <div class="col-4 pt-5 shadow-lg p-3 mb-5 bg-body rounded">
+				<div class="card rounded" style="width: 22rem;">
+                    <img src={% static "images\services4.jpg" %} class="card-img-top" alt="...">
+                    <div class="card-body">
+                    <h5 class="card-title text-center"><b>Threat Hunter</b></h5>
+                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis</p>
+                    <p class="text-danger"><u>Read More></u></p>
+                	</div>
+                </div>
+            </div>
+            <div class="col-4 pt-5 shadow-lg p-3 mb-5 bg-body rounded">
+				<div class="card rounded" style="width: 22rem;">
+                    <img src={% static "images\services5.jpg" %} class="card-img-top" alt="...">
+                    <div class="card-body">
+                    <h5 class="card-title text-center"><b>Disaster Planning </b></h5>
+                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis</p>
+                    <p class="text-danger"><u>Read More></u></p>
+                	</div>
+                </div>
+            </div>
+
+        	<div class="col-4 pt-5 shadow-lg p-3 mb-5 bg-body rounded">
+				<div class="card rounded" style="width: 22rem;">
+                    <img src={% static "images\services6.jpg" %} class="card-img-top" alt="...">
+                    <div class="card-body">
+                    <h5 class="card-title text-center"><b>Incident Responder</b></h5>
+                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis</p>
+                    <p class="text-danger"><u>Read More></u></p>
+                	</div>
+                </div>
+            </div>
+        </div>
+        <div class="row p-5 bg-light">
+        	<div class="col-4"></div>
+        	<div class="col-4 text-center">
+        		<nav aria-label="Page navigation example">
+  					<ul class="pagination justify-content-center">
+    					<li class="page-item">
+      					<a class="page-link" href="#" aria-label="Previous">
+        					<span aria-hidden="true">&laquo;</span>
+      					</a>
+    					</li>
+    					<li class="page-item"><a class="page-link" href="#">1</a></li>
+    					<li class="page-item"><a class="page-link" href="#">2</a></li>
+    					<li class="page-item">
+      						<a class="page-link" href="#" aria-label="Next">
+        					<span aria-hidden="true">&raquo;</span>
+      						</a>
+    					</li>
+  					</ul>
+				</nav>
+        	</div>
+        	<div class="col-4"></div>
+        </div>
+		</div>
+		
+
+{% endblock %}

@@ -1,0 +1,208 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+
+	<div class="row p-3 bg-light">
+		
+		<div class="col-12 pt-5 pb-5">
+			<h1 class="text-center"><b>Frequency Asked Questions</b></h1>
+			<br>
+			<p class="text-center"> Home > FAQ </p>
+		</div>
+		
+	</div>
+	<div class="container">
+	<div class="row text-left pt-5 ">
+		<div class="col-4 shadow p-3 mb-5 bg-body rounded">
+			<ul class="list-group">
+  				<li class="list-group-item pt-4 pb-4"><a href="{% url 'Help' %}" style="color: black;" target="_blank"></a><b>Help Center</b></li>
+  				<li class="list-group-item pt-4 pb-4"><a href="{% url 'Aboutus' %}" style="color: black;" target="_blank"><b>About Us</b></a></li>
+  				<li class="list-group-item pt-4 pb-4"><b>Terms and Conditions</b></li>
+  				<li class="list-group-item pt-4 pb-4"><b>Privacy Policy</b></li>
+  				<li class="list-group-item pt-4 pb-4"><a href="{% url 'Contact' %}" style="color: black;" target="_blank"><b>Contact Us</b></a> </li>
+			</ul>
+		</div>
+		<div class="col-8">
+			<div class="accordion" id="accordionExample">
+  				<div class="accordion-item">
+    				<h2 class="accordion-header" id="headingOne">
+      				<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+        			<b> What is Information Security? </b>
+      				</button>
+    				</h2>
+    				<div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+      					<div class="accordion-body">
+        					<p>Information security is a set of practices designed to keep personal data secure from unauthorized access and alteration during storing or transmitting from one place to another.
+								Information security is designed and implemented to protect the print, electronic and other private, sensitive and personal data from unauthorized persons. It is used to protect data from being misused, disclosure, destruction, modification, and disruption.</p>
+								<p> <b>Information Security Principle:</p></b>
+        					<ul>
+        						<li>Confidentiality is one of the basic elements of information security. Data is confidential when only authorized people access it. To ensure confidentiality one needs to use all the techniques designed for security like strong password, encryption, authentication and defense against penetration attacks.</li>
+								<li>Integrity refers to maintaining data and preventing it from modifications either accidentally or maliciously. Techniques used for confidentiality may protect data integrity as a cybercriminal can’t change data when they can’t get access to it. To ensure integrity in-depth few tools help in improving it.</li>
+								<li>Availability is another basic element in information security. It is vital to make sure that your data is not accessed by unauthorized persons but only those who have permission can access it. Availability in information security means matching network and computing resources to compute data access and implement a better policy for disaster recovery purposes.</li>
+							</ul>
+      					</div>
+    				</div>
+  				</div>
+  				<div class="accordion-item">
+    				<h2 class="accordion-header" id="headingTwo">
+     				<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+        			<b>How Do I Secure My Computer?</b>
+      				</button>
+    				</h2>
+    				<div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+      					<div class="accordion-body">
+        					<p><b>Tips to Protect your Computer:</b></p>
+        					<ul>
+        						<li><b>Use a firewall </b><br>
+									Windows has a firewall already built in and automatically turned on.</li>
+								<li><b>Keep all software up to date</b> <br>
+									Make sure to turn on automatic updates in Windows Update to keep Windows, Microsoft Office, and other Microsoft applications up to date. Turn on automatic updates for non-Microsoft software as well, especially browsers, Adobe Acrobat Reader, and other apps you regularly use.</li>
+								<li><b>Use antivirus software and keep it current</b> <br>
+									If you run Windows you have Windows Security or Windows Defender Security Center already installed on your device. </li>
+								<li><b>Make sure your passwords are well-chosen and protected</b> <br>
+									To learn how, see Protect your passwords.</li>
+								<li><b>Don’t open suspicious attachments or click unusual links in messages. </b><br>
+									They can appear in email, tweets, posts, online ads, messages, or attachments, and sometimes disguise themselves as known and trusted sources.
+								</li>
+								<li><b>Browse the web safely </b> <br>
+									Avoid visiting sites that offer potentially illicit content. Many of these sites install malware on the fly or offer downloads that contain malware. Use a modern browser like Microsoft Edge, which can help block malicious websites and prevent malicious code from running on your computer.</li>
+								<li><b>Stay away from pirated material</b> <br>
+									Avoid streaming or downloading movies, music, books, or applications that do not come from trusted sources. They may contain malware.</li>
+								<li><b>Don't use USBs or other external devices unless you own them </b><br>
+									To avoid infection by malware and viruses, ensure that all external devices either belong to you or come from a reliable source.</li>
+							</ul>
+      					</div>
+    				</div>
+  				</div>
+  				<div class="accordion-item">
+    				<h2 class="accordion-header" id="headingThree">
+      				<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+        			<b>What Is Data Management?</b>
+      				</button>
+    				</h2>
+    				<div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+      					<div class="accordion-body">
+        					<p>Data management is the practice of collecting, keeping, and using data securely, efficiently, and cost-effectively. The goal of data management is to help people, organizations, and connected things optimize the use of data within the bounds of policy and regulation so that they can make decisions and take actions that maximize the benefit to the organization. A robust data management strategy is becoming more important than ever as organizations increasingly rely on intangible assets to create value.</p>
+							<p>Managing digital data in an organization involves a broad range of tasks, policies, procedures, and practices. The work of data management has a wide scope, covering factors such as how to:</p>
+							<ul>
+								<li>Create, access, and update data across a diverse data tier</li>
+								<li>Store data across multiple clouds and on premises</li>
+								<li>Provide high availability and disaster recovery</li>
+								<li>Use data in a growing variety of apps, analytics, and algorithms</li>
+								<li>Ensure data privacy and security</li>
+								<li>Archive and destroy data in accordance with retention schedules and compliance requirements</li>
+							</ul>
+      					</div>
+   				 	</div>
+  				</div>
+
+  				<div class="accordion" id="accordionPanelsStayOpenExample">
+  					<div class="accordion-item">
+    				<h2 class="accordion-header" id="panelsStayOpen-headingOne">
+      				<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+        			<b> How Do I Protect The Data I Have?</b>
+     				</button>
+    				</h2>
+    				<div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
+      				<div class="accordion-body">
+						<p>Cyberattacks do not only happen to large corporations. Small businesses, groups and charities have to protect their IT systems, too.Here are some practical steps you can take today to tighten up your data security.</p>
+      					<ul>
+        						<li><b> Back up your data</b> <br>
+									Create a back-up copy of your data, and do this regularly. Store it somewhere other than your main workplace, if possible. That way, if there’s a break-in, fire or flood, you don’t lose everything.</li>
+								<li><b>Use strong passwords</b> <br>
+									Make sure you, your staff, volunteers, and anyone else involved in your operations uses strong passwords - including smartphones, laptops, tablets, email accounts and computers.</li>
+								<li><b>Take care when working remotely </b><br>
+									If you, or people you work with do their work remotely, make sure the devices you use are as secure as the equipment you use in the office.</li>
+								<li><b>Be wary of suspicious emails </b><br>
+									Educate yourself and those working for you on how to spot suspicious emails. Checking for obvious signs such as bad grammar, requests for you to act urgently, and requests for payment will help you avoid being caught out. If it looks suspicious, don’t trust it – and warn your staff not to either.</li>
+								<li><b>Install anti-virus and malware protection</b><br>
+									And keep it up-to-date. The National Cyber Security Centre has some useful advice and guidance on cyber security. </li>
+								<li><b>Don’t leave paperwork or laptops unattended </b><br>
+									Data breaches can occur when staff and volunteers leave paperwork or laptops unattended. This could be in the boot of a car, on a train, or at home. Make sure you take steps to protect the personal data you hold by being vigilant and storing it securely away when it’s not in use.</li>
+								<li><b>Make sure your Wi-Fi is secure</b> <br>
+									Using public Wi-Fi or an insecure connection could put personal data at risk, so you should make sure you always use a secure connection when connecting to the internet.</li>
+								<li><b>Lock your screen when you’re away from your desk</b> <br>
+									And make sure your staff do the same. Taking steps to lock your screen when you leave your desk is a simple thing to do, but will prevent someone else from accessing your computer.</li>
+								<li><b>Keep on top of who has access to what</b> <br>
+									You have to restrict who has access to your IT systems and buildings – you can’t let just anyone in unaccompanied because this will leave your systems vulnerable. The fewer people with access, the better. Visitors should be clearly identifiable. Make sure you limit IT access to people who work for you, where possible. If someone leaves your company, or if they’re absent for long periods of time, you may want to consider suspending their access to your systems.</li>
+								<li><b>Don’t keep data for longer than you need it </b><br>
+									Staying on top of what personal data you hold will save you time and resources. It will also help you with your data protection responsibilities. Only keep what you need, for as long as you need it.</li>
+								<li><b>Dispose of old IT equipment and records securely</b> <br>
+									Before you get rid of them, make sure no personal data is left on personal computers, laptops, smartphones or any other devices. You could consider using deletion software, or hire a specialist to wipe the data. This will ensure no one can access information they’re not supposed to see when you dispose of the equipment.</li>
+							</ul>
+      				</div>
+    			</div>
+  				</div>
+  				<div class="accordion-item">
+    				<h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+      				<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+        			<b>What Are Vulnerabilities and Attacks?</b>
+      				</button>
+    				</h2>
+    				<div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
+      					<div class="accordion-body">
+      			  			<p>A vulnerability is a weakness in design, implementation, operation, or internal control. Most of the vulnerabilities that have been discovered are documented in the Common Vulnerabilities and Exposures (CVE) database.[citation needed] An exploitable vulnerability is one for which at least one working attack or "exploit" exists.[13] Vulnerabilities can be researched, reverse-engineered, hunted, or exploited using automated tools or customized scripts.[14][15] To secure a computer system, it is important to understand the attacks that can be made against it, and these threats can typically be classified into one of these categories below:</p>
+							<ul>
+							<li><b>Backdoor</b> <br>
+							A backdoor in a computer system, a cryptosystem or an algorithm, is any secret method of bypassing normal authentication or security controls. They may exist for many reasons, including by original design or poor configuration. They may have been added by an authorized party to allow some legitimate access, or by an attacker for malicious reasons; but regardless of the motives for their existence, they create a vulnerability. Backdoors can be very hard to detect, and detection of backdoors is usually discovered by someone who has access to application source code or intimate knowledge of the operating system of the computer.</li>
+							<li><b>Denial-of-service attack </b> <br>
+								Denial of service attacks (DoS) are designed to make a machine or network resource unavailable to its intended users.[16] Attackers can deny service to individual victims, such as by deliberately entering a wrong password enough consecutive times to cause the victim's account to be locked, or they may overload the capabilities of a machine or network and block all users at once. While a network attack from a single IP address can be blocked by adding a new firewall rule, many forms of Distributed denial of service (DDoS) attacks are possible, where the attack comes from a large number of points – and defending is much more difficult. Such attacks can originate from the zombie computers of a botnet or from a range of other possible techniques, including reflection and amplification attacks, where innocent systems are fooled into sending traffic to the victim.</li>
+							<li> <b>Direct-access attacks </b><br>
+								An unauthorized user gaining physical access to a computer is most likely able to directly copy data from it. They may also compromise security by making operating system modifications, installing software worms, keyloggers, covert listening devices or using wireless microphones. Even when the system is protected by standard security measures, these may be bypassed by booting another operating system or tool from a CD-ROM or other bootable media. Disk encryption and Trusted Platform Module are designed to prevent these attacks.</li>
+							<li><b>Eavesdropping </b> <br>
+								Eavesdropping is the act of surreptitiously listening to a private computer "conversation" (communication), typically between hosts on a network. For instance, programs such as Carnivore and NarusInSight have been used by the FBI and NSA to eavesdrop on the systems of internet service providers. Even machines that operate as a closed system (i.e., with no contact to the outside world) can be eavesdropped upon via monitoring the faint electromagnetic transmissions generated by the hardware; TEMPEST is a specification by the NSA referring to these attacks.</li>
+							<li><b>Multi-vector, polymorphic attacks </b> <br>
+								Surfacing in 2017, a new class of multi-vector,[17] polymorphic[18] cyber threats combined several types of attacks and changed form to avoid cybersecurity controls as they spread.</li>
+							<li><b>Privilege escalation </b><br>
+								Privilege escalation describes a situation where an attacker with some level of restricted access is able to, without authorization, elevate their privileges or access level. For example, a standard computer user may be able to exploit a vulnerability in the system to gain access to restricted data; or even become "root" and have full unrestricted access to a system.</li>
+							<li><b>Malware </b><br>
+								Malicious software (malware) installed on a computer can leak personal information, can give control of the system to the attacker and can delete data permanently.</li>
+							<li><b>Tampering </b><br>
+								Tampering describes a malicious modification or alteration of data. So-called Evil Maid attacks and security services planting of surveillance capability into routers are examples.</li>
+
+
+							</ul>
+      					</div>
+    				</div>
+  				</div>
+  				<div class="accordion-item">
+    				<h2 class="accordion-header" id="panelsStayOpen-headingThree">
+      				<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+        			<b>Can I Use Email To Send Sensitive Information?</b> 
+      				</button>
+    				</h2>
+    				<div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree">
+      					<div class="accordion-body"> 
+        					<p>There are really three ways to ensure you’re sending docs securely over email: </p>
+							<ul>
+							<li>Encrypt the entire email.</li>
+							<li>Encrypt the attachment.</li>
+							<li>Password-protect the document.</li>
+							</ul>
+        					
+      					</div>
+    				</div>
+  				</div>
+				</div>
+			</div>
+		</div>
+		</div>
+		</div>
+		        <br><br><br><br>
+				<div class="row bg-light">
+					<div class="col-3 ps-5 pt-5 pb-5"><b> Our Valuable Clients </b> </div>
+					<div class="col-9 pt-5 pb-5">
+						<marquee>
+						    <img src={% static "images\partner1.png" %}> &nbsp; &nbsp; &nbsp; &nbsp;
+							<img src={% static "images\partner2.png" %}> &nbsp; &nbsp;&nbsp; &nbsp;
+							<img src={% static "images\partner3.png" %}> &nbsp; &nbsp;&nbsp; &nbsp;
+							<img src={% static "images\partner4.png" %}> &nbsp; &nbsp;&nbsp; &nbsp;
+							<img src={% static "images\partner5.png" %}> &nbsp; &nbsp;&nbsp; &nbsp;
+						</marquee>
+					</div>
+				</div>
+	</div>
+	</div>
+	
+
+{% endblock %}

@@ -1,0 +1,36 @@
+{% extends 'main.html' %}
+{% block content %}
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="{%static 'css/bootstrap.min1.css'%}">
+	<link rel="stylesheet" type="text/css" href="{%static 'icofont/icofont.min.css'%}">
+</head>
+<body>
+	<div class="row p-5">
+		<div class="col-3"></div>
+		<div class="col-6 p-5 bg-dark text-light p-3 mb-5 rounded" style="box-shadow: 0px 0px 10px #333">
+			<form action="" method="POST">
+				{% csrf_token %}
+			<h1 class="text-light"><b>Help & Support </b></h1>
+			<br> <br>
+			<label class="text-secondary">Title</label>
+			<input type="text" name="t"required class="form-control bg-transparent text-light" style="border:none; border-bottom: 1px solid white;">
+			<br>
+			<label class="text-secondary">Message</label>
+			<textarea rows="5" cols="50" name="msg" required class="form-control  bg-transparent text-light" style="border:none; border-bottom: 1px solid white;">
+			</textarea><br> <br>
+			<input type="submit" value="Send"  onclick="alert('yes')" class="text-light rounded-pill btn-lg ps-5 btn-lg pe-5" style="background-color:  purple;">
+			<h3 class="text-secondary">{{x}}</h3>
+			<h3 class="text-danger">{{y}}</h3>
+		</form>
+			
+		</div>
+		<div class="col-3"></div>
+	</div>
+{% endblock %}
+
+</body>
+</html>

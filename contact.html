@@ -1,0 +1,111 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+
+	<div class="row p-3 bg-light">
+		<div class="col-4"></div>
+		<div class="col-4 p-5">
+			<h1 class="text-center"><b>Contact</b></h1>
+			<br>
+			<p class="text-center"> Home > Contact </p>
+		</div>
+		<div class="col-4"></div>
+	</div>
+	<div class="container-fluid">
+	<div class="container">
+	<div class="row  p-5">
+		
+		<div class="col-4 p-3 ">
+			<div class="card shadow-lg p-3 mb-5 bg-body rounded">
+			<i class="icofont-location-pin  icofont-3x border ms-auto me-auto p-2 rounded-circle" style="color: purple;"></i>
+			<br>
+			<h4 class="text-center"><b>Office Address</b></h4>
+			<br>
+			<p class="text-center">10,Mall Road,Amritsar, Punjab
+			</p>
+			
+		    </div>
+	    </div>
+	    
+		<div class="col-4  p-3">
+
+			<div class="card shadow-lg p-3 mb-5 bg-body rounded">
+		    <i class="icofont-ui-call icofont-3x border ms-auto me-auto p-2 rounded-circle" style="color: purple;"></i>
+		    <br>
+		    <h4 class="text-center"><b>Phone Number</b></h4>
+		    <br>
+		    <p class="text-center">&nbsp;&nbsp;&nbsp;+91 7009361561<br>
+		    &nbsp;&nbsp;&nbsp;+91 9878362143</p>
+
+		    </div>
+	    </div>
+	    
+		<div class="col-4  p-3">
+			<div class="card shadow-lg p-3 mb-5 bg-body rounded">
+			<i class="icofont-email icofont-3x border ms-auto me-auto p-2 rounded-circle" style="color: purple;"></i>
+			<br>
+			<h4 class="text-center"><b>Mail Address</b></h4>
+			<br>
+			<p class="text-center">&nbsp;&nbsp;&nbsp;securoplex7@gmail.com<br>&nbsp;&nbsp;&nbsp;bhavleen7355@gmail.com</p>
+
+		    </div>
+	    </div>
+	</div>
+	</div>
+	</div>
+		
+		<div class="row p-5  bg-light">
+			<div class=" col-12 mx-auto"><h1 class="text-center"><b>Send Us A Message</b></h1>
+			<br> <p class="text-center">Interact with us by dropping a message . We will be in touch very shortly. 
+			</p></div>
+		</div>
+		<div class="p-5 border shadow-lg ">
+			<form action="" method="POST">
+				{% csrf_token %}
+		<div class="row" >
+			
+			<div class="col-6 ps-5 text-light">
+                
+				
+				<label >Your Name</label><br>
+				<input type="text" name="n" required pattern="[A-Z a-z] {3,50}" class="form-control"><br>
+				<label>Phone Number</label><br>
+				<input type="Number" name="ph" pattern="[0-9] {10}" required class="form-control"><br>
+				
+			   
+
+			</div>
+		    
+
+			<div class="col-6 ps-5 text-light ">
+				
+				
+				<label>Email Address</label><br>
+				<input type="Email" name="em" pattern=".+@globex\.com" required class="form-control"><br>
+				<label>Subject</label><br>
+				<input type="text" name="sub" required class="form-control">
+				
+			   
+		      
+			</div>
+		</div>
+			<div class="row ">
+				<div class="col-12 ps-5 pe-5 text-light">
+				<label>Message...</label><br>
+				<textarea rol="6"name="msg" required class="form-control"></textarea>
+				
+				<input type="checkbox" name=""> By checking this, you agree to our Terms and Privacy Policy<br><br> <br>
+				<input type="submit" value="Send Message"  onclick="alert('Submitted Successfully')" class="rounded-pill btn text-light" style="background-color: purple;">
+				<h3 class="text-secondary">{{x}}</h3>
+				<h3 class="text-danger">{{y}}</h3>
+			</div>
+			</div>
+			</form>
+		
+		</div>  
+		</div>
+		</div>
+		</div>
+		
+
+{% endblock %}

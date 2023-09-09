@@ -1,0 +1,487 @@
+{% extends 'base.html' %}
+{% block content %}
+
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="{%static 'css/bootstrap.min.css'%}">
+	<link rel="stylesheet" type="text/css" href="{%static 'icofont/icofont.min.css'%}">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.theme.min.css">
+	<style type="text/css">
+		.cur{color: red; background-color: #eee}
+		.cur:hover{color: white; background-color: purple;}
+		.ico{border:1px solid #ccc;}
+		.ico:hover{border: 2px solid purple;}
+	</style>
+	<style> 
+.testimonial{
+    border-left: 4px solid #001d4a;;
+    box-shadow: 5px 5px 6px rgba(0, 0, 0, 0.06);
+    padding: 30px 30px 30px 30px;
+    margin: 0 15px 30px 15px;
+    overflow: hidden;
+    position: relative;
+}
+.testimonial:before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    border-top: 25px solid #001d4a;;
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    transform: rotate(-45deg);
+    transform-origin: 80% -30% 0;
+}
+.testimonial .pic{
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: absolute;
+    top: 60px;
+    left: 20px;
+}
+.testimonial .pic img{
+    width: 100%;
+    height: 80px;
+}
+.testimonial .description{
+    font-size: 15px;
+    font-style: italic;
+    color: black;
+    line-height: 25px;
+    margin-bottom: 15px;
+
+}
+.testimonial .title{
+    display: inline-block;
+    font-size: 20px;
+    font-weight: 700;
+    color: black;;
+    margin: 0;
+}
+.testimonial .post{
+    display: inline-block;
+    font-size: 17px;
+    color: #d45113;
+}
+.owl-theme .owl-controls .owl-page span{
+    border: 2px solid #d45113;
+    background: #fff;
+    opacity: 1;
+}
+.owl-theme .owl-controls .owl-page.active span,
+.owl-theme .owl-controls .owl-page:hover span{
+    background: #d45113;
+}
+@media only screen and (max-width: 767px){
+    .testimonial{
+        padding: 20px;
+        text-align: center;
+    }
+    .testimonial .pic{
+        display: block;
+        position: static;
+        margin: 0 auto 15px;
+    }
+}
+</style>
+</head>
+<body>
+	<div class="container-fluid" style=" background-image: url({% static 'images/banner.jpg' %}) ; background-size: cover;">
+	<div class="container">
+	<div class="row text-light">
+		<div class="col-6 p-5 text-light">
+			<br><br><br><br><br>
+			<h1 data-aos="fade-up"><b> We Protect The World's Most Sensitive Data </b></h1>
+			<p>Maintaining cyber security in a constantly evolving threat landscape is a challenge for all organizations. Traditional Reactive approaches, in which resources were put towards protecting systems against the biggest known threats.</p><br> <br> <br>
+			<a href="{% url 'Login' %}"><input type="submit" value="Get Started Now" class="text-light rounded-pill ps-5 btn-lg pe-5" style="background-color: purple;"></a>
+			&nbsp;&nbsp;&nbsp;
+			<a href="{% url 'Aboutus' %}">Know more about us></a>
+		</div>
+		<div class="col-6"></div>
+	</div>
+	</div>
+	</div>
+	<div class="container">
+	<div class="row pt-5">
+		<div class="col-4 p-3 mt-2 text-center">
+			<div class="card  bg-dark text-light text-center rounded pb-3" data-aos="flip-left" data-aos-duration="2000" style="box-shadow: 0px 0px 10px purple">
+  					<img src={% static "images/home1.png" %}>
+  					<h5 class="card-title "><b>Cyber Threats</b></h5><br>
+    				<p class="card-text">Cyber Threat is any possible malicious attack that seeks to unlawfully access data, disrupt digital operations or damage information.</p><br>
+   					<a href="{% url 'Allthreats' %}"><button class="ms-5 btn btn-outline-light btn-lg ico"style="width: 250px !important">View More</button> </a>
+			</div>	
+		</div>
+		<div class="col-4 p-1 mb-3 text-center">
+			<div class="card  bg-dark text-light text-center pb-3" data-aos="flip-left" data-aos-duration="2000" style="box-shadow: 0px 0px 10px purple">
+  					<img src={% static "images/home2.png" %}>
+  					<h5 class="card-title "><b>Cyber Crimes</b></h5><br>
+    				<p class="card-text">Cyber Crime is the use of the computer as an instrument to further illegal ends, such as committing fraud or violating privacy.</p><br>
+					<a href="{% url 'Allcrimes' %}"><button class="ms-5 ico btn btn-outline-light btn-lg"style="width: 250px !important">View More</button></a>
+			</div>
+		</div>
+		<div class="col-4 p-3 mt-2 text-center">
+			<div class="card  bg-dark text-light text-center pb-3" data-aos="flip-left" data-aos-duration="2000" style="box-shadow: 0px 0px 10px purple">
+  					<img src={% static "images/home3.png" %}>
+  					<h5 class="card-title"><b> Cyber Attacks</b></h5><br>
+    				<p class="card-text">A Cyber attack is any offensive maneuver that targets computer information system, networks, infrastructures, or personal computer devices.</p><br>
+					<a href="{% url 'Allattacks' %}"><button class="ms-5 ico btn btn-outline-light btn-lg"style="width: 250px !important">View More</button></a>
+			</div>
+		</div>
+	</div>
+	</div>
+
+	<div class="row">
+		<div class="col-6 p-5">
+			<img src={% static "images/operation.jpg" %} class="rounded ps-4" width="90%" >
+		</div>
+		<div class="col-6 p-5 text-light">
+			<h3 data-aos="fade-up"><b>24/7 Cybersecurity Operation Center</b></h3><br>
+			<p>Cyber Security Operations tells us  what we need to do to ensure a strong cyber defence. <br>
+			We are providing 24*7 security monitoring services virtually through this site. It includes following Scanning to ensure Cyber Defence against various Threats and attacks.<br></p>
+			<i class="icofont-check-alt border  p-2 rounded-circle cur"></i>
+			&nbsp;&nbsp;Port Scanning<br><br>
+			<i class="icofont-check-alt border p-2 rounded-circle cur"></i>
+			&nbsp;&nbsp;Virus Scan<br><br>
+			<i class="icofont-check-alt border p-2 rounded-circle cur "></i>
+			&nbsp;&nbsp;Domain Scan<br><br>
+			<i class="icofont-check-alt border p-2 rounded-circle cur"></i>
+			&nbsp;&nbsp;Vulnerability Analysis<br><br>
+			<i class="icofont-check-alt border p-2 rounded-circle cur"></i>
+			&nbsp;&nbsp;Latest Updates<br><br>
+			<i class="icofont-check-alt border p-2 rounded-circle cur"></i>
+			&nbsp;&nbsp;Security Tools
+			
+		</div>
+	</div>	
+
+	<div class="row bg-light">
+		<div class="col-12 text-center pt-5">
+			<h1 data-aos="fade-up"><b>Our Approach To Cyber Security</b></h1><br>
+			<p>We provide information  on numerous Risk, Cyber Attacks, Threats and Crimes <br> as well as practical Advice and Tips, Alerts and Guidance on how to protect your website from unauthorized access.</p><br><br>
+		</div>
+	</div>
+	<div class="container">
+	<div class="row pt-5 pb-5">
+		<div class="col-4 p-3">
+			<div class="p-5 ico bg-light" data-aos="flip-left" data-aos-duration="2000">
+			<img src={% static "images/icon1.png" %}><br><br>
+			<h4 ><b>Increased And Evolving Threat </b></h4><br>
+			<p>With Advancement in Technology, Malicious use of programs and exploitations of vulnerabilities has increased to great extent. Cyber threats have been evolved to become more aggressive , potent and stealthy. </p>
+		</div>
+		</div>
+		<div class="col-4 p-3">
+			<div class="ico p-5 bg-light" data-aos="flip-left" data-aos-duration="2000">
+			<img src={% static "images/icon2.png" %}><br><br>
+			<h4><b>Widening Attack Surface </b></h4><br>
+			<p>Attack surface means the total number of all possible entry points for unauthorized access into any system. It includes all the vulnerabilities and end points that can be exploited , So widening Attack Surfaces should be managed. </p>
+		</div>
+		</div>
+		<div class="col-4 p-3">
+			<div class="ico p-5 bg-light" data-aos="flip-left" data-aos-duration="2000"> 
+			<img src={% static "images/icon3.png" %}><br><br>
+			<h4><b>Structural Weaknesses</b></h4><br>
+			<p>It is a weakness that can be exploited by any attacker.hackers gain access by exploiting weakest links in IT security. It may include operating system weakness , network weakness and process weakness.  </p>
+		</div>
+		</div>
+	</div>
+	</div>
+	<div class="container-fluid" style="background-image: url({% static 'images/services-bg.jpg' %});background-size: cover;">
+	<div class="row">
+		<div class="col-12 text-center text-light p-5">
+			<h1 data-aos="fade-up"><b>We Offer Professional Security Solutions</b></h1><br>
+			<p>Cyber security solutions are technological tools and services <br></btr>that helps to protect organizations against cyber attacks .Following are the distinct types af Cyber Security.</p>
+		</div>
+	</div>
+
+	<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div id="testimonial-slider1" class="owl-carousel">
+                <div class="testimonial bg-light">
+                	<div class="description" style="width: 100%">
+						<img src={% static "images/services-icon1.png" %} class="bg-danger text-light"><br><br>
+						<h3><b>Application security</b></h3><br>
+						<p>Application Security is the process of Developing, adding and testing security features within applications to prevent Security Vulnerabilities against Threats.</p>
+                   		<a href="https://en.wikipedia.org/wiki/Application_security" target="_blank">Read More > </a>
+                	</div>
+                </div>
+                <div class="testimonial bg-light">
+                	<div class="description" style="width: 100%">
+						<img src={% static "images/services-icon2.png" %} class="bg-danger text-light"><br><br>
+						<h3><b>Cloud Security</b></h3><br>
+						<p>It is a collection of security measures designed to protect cloud-based infrastructure, applications and data. It ensures user and device authentiaction & data privacy. </p>
+						<a href="https://en.wikipedia.org/wiki/Cloud_computing_security" target="_blank">Read More > </a>
+					</div>
+                </div>
+                <div class="testimonial bg-light">
+                	<div class="description" style="width: 100%">
+						<img src={% static "images/services-icon3.png" %} class="bg-danger text-light"><br><br>
+						<h3><b>Infrastructure Security</b></h3><br>
+						<p>It prevents damage to technology assets and data due to attack or disaster. It protect critical infrastructure such as airport, seaports, hospitals etc. </p>
+						<a href="https://en.wikipedia.org/wiki/Infrastructure_security" target="_blank">Read More > </a>
+					</div>
+                </div>
+				<div class="testimonial bg-light">
+					<div class="description" style="width: 100%">
+                        <img src={% static "images/services-icon4.png" %} class="bg-danger text-light"><br><br>
+                   
+                    	<h3><b>Threat Hunter </b></h3><br>
+                    	<p>It is a proactive security search through network, endpoints and data sets to hunt malicious, suspicious or risky activities that are detected by existing tools.
+                    </p><a href="https://en.wikipedia.org/wiki/Cyber_threat_hunting" target="_blank">Read More > </a>
+                   </div>
+                </div>
+                <div class="testimonial bg-light">
+                	<div class="description" style="width: 100%">
+						<img src={% static "images/services-icon5.png" %} class="bg-danger text-light"><br><br>
+						<h3><b>Disaster Planning</b></h3><br>
+						<p>It is a planning process which ensures businesses to solve critical events that effects their activities.It ensures quick respond to a disaster that affects information systems & minimize its effects. </p>
+						<a href="https://cybergon.co/our-services/disaster-planning/"target="_blank">Read More > </a>
+					</div>
+                </div>
+                <div class="testimonial bg-light">
+                	<div class="description" style="width: 100%">
+						<img src={% static "images/services-icon6.png" %} class="bg-danger text-light"><br><br>
+						<h3><b>Incident Responder</b></h3><br>
+						<p>It is an organized approach to addressing and managing the aftermath of a security breach or cyber attack . It helps to limit damage and reduces recovery time and costs. </p>
+						<a href="https://en.wikipedia.org/wiki/Computer_security_incident_management" target="_blank">Read More > </a>
+					</div>
+				</div>
+            </div>
+        
+        </div>
+    </div>
+</div>
+</div>
+
+
+<!-- counter block  -->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css">
+	<style type="text/css">
+		.container1 {
+    margin-top: 70px
+}
+
+.counter-box {
+    display: block;
+    background: #f6f6f6;
+    padding: 40px 20px 37px;
+    text-align: center
+}
+
+.counter-box p {
+    margin: 5px 0 0;
+    padding: 0;
+    color: #909090;
+    font-size: 18px;
+    font-weight: 500
+}
+
+.counter-box i {
+    font-size: 60px;
+    margin: 0 0 15px;
+    color: #d2d2d2
+}
+
+.counter {
+    display: block;
+    font-size: 32px;
+    font-weight: 700;
+    color: #666;
+    line-height: 28px
+}
+
+.counter-box.colored {
+    background: linear-gradient(to left,black,purple);
+}
+
+.counter-box.colored p,
+.counter-box.colored i,
+.counter-box.colored .counter {
+    color: #fff
+}
+	</style>
+</head>
+<body>
+	<div class="container1">
+    <div class="row">
+        <div class="four col-md-3">
+            <div class="counter-box colored"> <i class="fa fa-thumbs-o-up"></i> <span class="counter">1345</span>
+                <p>Customers Globally</p>
+            </div>
+        </div>
+        <div class="four col-md-3">
+            <div class="counter-box colored"> <i class="fa fa-group"></i> <span class="counter">1500 </span>
+                <p>Registered Members</p>
+            </div>
+        </div>
+        <div class="four col-md-3">
+            <div class="counter-box colored"> <i class="fa fa-group"></i> <span class="counter">3000</span>
+                <p>Visitors</p>
+            </div>
+        </div>
+        <div class="four col-md-3">
+            <div class="counter-box colored"> <i class="fa fa-user"></i> <span class="counter">95%</span>
+                <p>Client Retention Rate</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<script type="text/javascript">
+	$(document).ready(function() {
+
+$('.counter').each(function () {
+$(this).prop('Counter',0).animate({
+Counter: $(this).text()
+}, {
+duration: 4000,
+easing: 'swing',
+step: function (now) {
+$(this).text(Math.ceil(now));
+}
+});
+});
+
+});
+</script>
+</body>
+</html>
+
+<!-- end of counter  block  -->
+
+<br> <br>
+<div class="container-fluid" style="background-image: url({% static 'images/feedback-bg.jpg' %});background-size: cover;">
+	<div class="row">
+		<div class="col-12 text-center text-light p-5">
+			<h1 data-aos="fade-up"><b>Our Trusted Clients Feedback</b></h1><br>
+		</div>
+	</div>
+
+	<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div id="testimonial-slider" class="owl-carousel">
+                <div class="testimonial bg-light">
+                	<div class="description" style="width: 100%">
+						<p>Good Website with some decent new blogs and detail information about Cyber Attacks and Threats. </p>
+						<img src={% static "images/user1.jpg" %} height="80px" class="rounded-circle">
+                   		<h3 class="title">Jessica Lora</h3>
+                    	<small class="post">TV Model</small>
+                	</div>
+                </div>
+                <div class="testimonial bg-light">
+                	<div class="description" style="width: 100%">
+						<p>It is a very good website for Cyber Security Students who are just pursuing in Cyber Security Field ,the UI and all the staff is proficient</p>
+						<img src={% static "images/user2.jpg" %} height="80px" class="rounded-circle">
+						<h3 class="title">David Warmer</h3>
+                    	<small class="post">Sales Executive</small>
+					</div>
+                </div>
+                <div class="testimonial bg-light">
+                	<div class="description" style="width: 100%">
+						<p>Nowadays there are so many hackers in the market but with the help of this website, I learn about Cyber Security and it is really helpful for me. </p>
+						<img src={% static "images/user3.jpg" %} height="80px" class="rounded-circle">
+						<h3 class="title">James Andy</h3>
+                    	<small class="post">Librarian</small>
+					</div>
+                </div>
+                <div class="testimonial bg-light">
+                	<div class="description" style="width: 100%">
+						<p> The website is quite interesting as it include all the essential elements of Cyber Security.</p>
+						<img src={% static "images/user4.jpg" %} height="80px" class="rounded-circle">
+						<h3 class="title">Joe Root</h3>
+                    	<small class="post">Executive Assistant</small>
+					</div>
+                </div>
+				<div class="testimonial bg-light">
+					<div class="description" style="width: 100%">
+                    	<p> This website is very helpful as it provides all important information like Cyber cell near me,Helplines numbers ,Lawyers and various Cyber Crimes.
+                    	</p>
+                    	<img src={% static "images/user5.jpg" %} height="80px" class="rounded-circle">
+                    	<h3 class="title">Sarah Taylor</h3>
+                    	<small class="post">Secretary</small>
+                   </div>
+                </div>
+                <div class="testimonial bg-light">
+                	<div class="description" style="width: 100%">
+						<p> The features of scanning are good and Website layout is clean ,impressive and intuitive.</p>
+						<img src={% static "images/user6.jpg" %} height="80px" class="rounded-circle">
+						<h3 class="title">Amy Jones</h3>
+                    	<small class="post">Software Engineer</small>
+					</div>
+                </div>
+            </div>
+        
+        </div>
+    </div>
+</div>
+</div>
+<div class="row bg-light">
+	<div class="col-3 pt-5 pb-5 ps-5"><h4 data-aos="fade-up"><b> Our Valuable Clients </b> </h4></div>
+		<div class="col-9 pt-5 pb-5">
+			<marquee>
+				<img src={% static "images\partner1.png" %}> &nbsp; &nbsp; &nbsp; &nbsp;
+				<img src={% static "images\partner2.png" %}> &nbsp; &nbsp;&nbsp; &nbsp;
+				<img src={% static "images\partner3.png" %}> &nbsp; &nbsp;&nbsp; &nbsp;
+				<img src={% static "images\partner4.png" %}> &nbsp; &nbsp;&nbsp; &nbsp;
+				<img src={% static "images\partner5.png" %}> &nbsp; &nbsp;&nbsp; &nbsp;
+			</marquee>
+		</div>
+	</div>
+	</div>
+
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"></script>
+ <script>
+$(document).ready(function(){
+    $("#testimonial-slider").owlCarousel({
+        items:3,
+        itemsDesktop:[800,2],
+        itemsDesktopSmall:[990,1],
+        itemsTablet:[768,1],
+        pagination:true,
+        navigation:false,
+        navigationText:["",""],
+        slideSpeed:1000,
+        autoPlay:true
+    });
+});
+
+$(document).ready(function(){
+    $("#testimonial-slider1").owlCarousel({
+        items:3,
+        itemsDesktop:[800,2],
+        itemsDesktopSmall:[990,1],
+        itemsTablet:[768,1],
+        pagination:true,
+        navigation:false,
+        navigationText:["",""],
+        slideSpeed:1000,
+        autoPlay:true
+    });
+});
+</script>
+</body>
+</html>
+
+{% endblock %}

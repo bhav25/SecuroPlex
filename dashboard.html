@@ -1,0 +1,95 @@
+{% extends 'main.html' %}
+{% block content %}
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="{%static 'css/bootstrap.min.css' %}">
+	<link rel="stylesheet" type="text/css" href="{%static 'icofont/icofont.min.css'%}">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+	a{text-decoration: none !important;}
+</style>
+</head>
+<body>
+	<div class="container-fluid pt-5 pb-5" style=" background-image: url({% static 'images/blog14.webp' %}) ; background-size: cover;" height="100%">
+		<div class="row">
+			<div class="col-12">
+				<h1 class="text-light text-center"> Welcome To Dashboard </h1> <br> <br>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-4 p-5" data-aos="zoom-in-up">
+				<a href="{% url 'Security_tools' %}" style="color: black" >
+					<div class="card text-light text-center rounded  shadow-lg p-3">
+				 	<span class="fa fa-cogs fa-3x" style="color: black;"></span> <br> <h4>Security Tools</h4>
+					</div> 
+				</a> 
+			</div>
+			<div class="col-4 p-5" data-aos="zoom-in-up">
+				<a href="{% url 'Portscan' %}" style="color: black" >
+					<div class="card text-light text-center rounded  shadow-lg p-3">
+					<i class="icofont-look icofont-3x" style="color: black;"></i><br> <h4>Port Scan</h4>
+					</div> 
+				</a> 
+			</div>
+			<div class="col-4 p-5" data-aos="zoom-in-up">
+				<a href="{% url 'Quickscan' %}" style="color: black" >
+					<div class="card text-light text-center rounded  shadow-lg p-3">
+					<i class="icofont-ui-fire-wall icofont-3x" style="color: black;"></i> <br> <h4>Quick Scan</h4>
+					</div> 
+				</a> 
+			</div>	
+		</div>
+		<div class="row">
+			<div class="col-4 p-5" data-aos="zoom-in-up">
+				<a href="{% url 'Rangescan' %}" style="color: black" >
+					<div class="card text-light text-center rounded  shadow-lg p-3">
+						<i class="icofont-search-map icofont-3x" style="color: black;" ></i> <br> <h4>Range Scan </h4>
+					</div> 
+				</a> 
+			</div>
+			<div class="col-4 p-5" data-aos="zoom-in-up">
+				<a href="{% url 'Fullscan' %}" style="color: black" >
+					<div class="card text-light text-center rounded  shadow-lg p-3">
+						<i class="icofont-search-document icofont-3x" style="color: black;" ></i> <br> <h4>Full Scan </h4>
+					</div> 
+				</a> 
+			</div>
+			<div class="col-4 p-5" data-aos="zoom-in-up">
+				<a href="{% url 'Domainscan' %}" style="color: black" >
+					<div class="card text-light text-center rounded  shadow-lg p-3">
+						<i class="icofont-ui-file icofont-3x" style="color: black;" ></i> <br> <h4>Domain Scan </h4>
+					</div> 
+				</a> 
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-4 p-5" data-aos="zoom-in-up">
+				<a href="{% url 'Filescan' %}" style="color: black" >
+					<div class="card text-light text-center rounded  shadow-lg p-3">
+						<i class="icofont-kiwibox icofont-3x" style="color: black;" ></i> <br> <h4> Virus Scan  </h4>
+					</div> 
+				</a> 
+			</div>
+			<div class="col-4 p-5" data-aos="zoom-in-up">
+				<a href="{% url 'Vulnerability' %}" style="color: black" >
+					<div class="card text-light text-center rounded  shadow-lg p-3">
+						<i class="icofont-look icofont-3x" style="color: black;" ></i> <br> <h4>Vulnerability </h4>
+					</div> 
+				</a> 
+			</div>
+			<div class="col-4 p-5" data-aos="zoom-in-up">
+				<a href="{% url 'Whoisscanning' %}" style="color: black" >
+					<div class="card text-light text-center rounded  shadow-lg p-3">
+						<i class="icofont-search-user icofont-3x" style="color: black;" ></i> <br> <h4>Who Is Scanning </h4>
+					</div> 
+				</a> 
+			</div>
+		</div>
+	</div>
+</body>
+</html>
+
+{% endblock %}

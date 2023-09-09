@@ -1,0 +1,50 @@
+{% extends 'main.html' %}
+{% block content %}
+{% load static %}
+
+<div class="row">
+    <div class="col-12 text-center p-3">
+        <h1 style="color: purple;">EDIT PROFILE</h1>
+    </div>
+</div>
+
+<div class="p-5 border shadow-lg ">
+    <form action="" method="POST">
+        {% csrf_token %}
+<div class="row" >
+    
+    <div class="col-6 ps-5 text-dark">
+        <label><b>User image</b></label><br>
+        <input type="file" name="i" class=""> <br> <br>
+        <label ><b>User Name</b></label><br>
+        <input type="text" name="name" class="form-control" value="{{us.name}}"><br>
+        <label><b>Phone Number</b></label><br>
+        <input type="Number" name="phone"  class="form-control" value="{{us.phone}}"><br>
+        <label><b>Email Address</b></label><br>
+        <input type="Email" name="email" disabled class="form-control" value="{{us.email}}"><br>
+    </div>
+    
+
+    <div class="col-6 ps-5 text-dark ">
+        <label><b>DOB</b></label><br>
+        <input type="date" name="dob" class="form-control" value="{{us.dob}}"> <br>
+        <label><b>Gender</b></label> <br>
+        <input type="radio" name="gender" value="m"> Male &nbsp;&nbsp;
+        <input type="radio" name="gender" value="f"> Female <br><br>
+        <label ><b>City</b></label><br>
+        <input type="text" name="city" class="form-control"  value="{{us.city}}"><br>
+        <label ><b>State</b></label><br>
+        <input type="text" name="state" class="form-control" value="{{us.state}}"><br>     
+    </div>
+</div>
+<div class="row">
+    <div class="col-12 text-center p-5">
+        <input type="submit" value="Save"  onclick="alert('Submitted Successfully')" class="rounded-pill btn text-light" style="background-color: purple;">
+    </div>
+</div>
+
+
+
+
+
+{% endblock %}

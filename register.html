@@ -1,0 +1,49 @@
+
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'icofont/icofont.min.css' %}">
+</head>
+<body>
+	<div class="container-fluid bg-gradient">
+		<div class="container">
+			<div class="row text-light">
+				<div class="col-1"></div>
+				<div class="col-5 ps-5">
+					<img src={% static "images/reg4.webp" %} width="105%" height="100%">
+				</div>
+				<div class="col-5 bg-dark text-light p-5">
+					<form action="" method="POST">
+						{% csrf_token %}
+						<h1> Registration <span class="text-danger">Info</span> </h1>
+						<br><br>
+						<input type="text" name="n" required  pattern="[A-Z a-z]{3,100}" title="enter only 3 to 50 characters" class="form-control text-light  bg-transparent" style="border:none; border-bottom: 1px solid white;" placeholder="Name"><br>
+
+						<input type="email" name="em" title= "Must include @ and . " required class="form-control text-light bg-transparent" style="border:none; border-bottom: 1px solid white;"placeholder="email"><br>
+						<input type="text" name="ph"  title="Enter only 10 digits" pattern="[0-9]{10}" required class="form-control text-light bg-transparent" style="border:none; border-bottom: 1px solid white;" placeholder="Phone"><br>
+						<input type="Password" name="pw" title="Use uppercase and lowercase letters, numbers and special symbols.Password must be of 8 characters." pattern="($?=._*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required class="form-control text-light bg-transparent" style="border:none; border-bottom: 1px solid white;" placeholder="Password"><br>
+						<input type="Password" name="cpw" pattern="($?=._*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required class="form-control text-light bg-transparent" style="border:none; border-bottom: 1px solid white;" placeholder="Confirm Password"><br><br>
+						<div class="text-center">
+							<input type="submit" value="Register" class="text-light text-center rounded-pill btn btn-danger ps-5 btn-lg pe-5" style="color: purple;"><br>
+							<h3 class="text-secondary">{{x}}</h3>
+							<h3 class="text-danger">{{y}}</h3> 
+							<h3 class="text-danger">{{z}}</h3>
+							<h3 class="text-danger">{{msg}}</h3>
+						</form><br>
+					<div class="text-center"> Do You Have an Account ? </div><br>
+				<a href ="{% url 'Login' %}"  style="text-decoration: none;" class="text-danger text-center btn btn-link ps-5 btn-lg pe-5"><u>Login </u></a>
+				</div>
+		</div>
+		</div>
+		
+		
+		<div class="col-1"></div>
+	</div>
+{% endblock %}
+</body>
+</html>

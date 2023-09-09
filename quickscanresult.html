@@ -1,0 +1,72 @@
+{% extends 'main.html' %}
+{% block content %}
+{% load static %}
+
+<div class="container">
+    <div class="row">
+        <div class="col-3"></div>
+        <div class="col-6 text-center p-2 ">
+            <h1 style="color: purple; font-family: 'Arial black';"><b>QUICK SCAN</b></h1>
+            <br> <br> 
+
+        </div>
+        <div class="col-3"> </div>
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="col-3"></div>
+    <div class="col-6 text-center">
+    
+        {% for x in result %}
+            <p>{{x}}</p>  
+  
+        {% endfor %}
+    
+     
+    </div>
+    <div class="col-3"></div>
+</div>
+<br> <br>
+
+<div class="row">
+    <div class="col-md-4">
+
+    </div>
+    <div class="col-md-4">
+      <ul>
+        <li> TCP port 21 — FTP (File Transfer Protocol)</li>
+        
+        <li>TCP port 22 — SSH (Secure Shell)</li>
+        
+        <li>TCP port 23 — Telnet</li>
+        
+        <li>TCP port 25 — SMTP (Simple Mail Transfer Protocol)</li>
+        
+        <li>TCP and UDP port 53 — DNS (Domain Name System)</li>
+        
+        <li>TCP port 443 — HTTP (Hypertext Transport Protocol) and HTTPS (HTTP over SSL)</li>
+        
+        <li>TCP port 110 — POP3 (Post Office Protocol version 3)</li>
+        
+        <li>TCP and UDP port 135 — Windows RPC</li>
+        
+        <li>TCP and UDP ports 137–139 — Windows NetBIOS over TCP/IP</li>
+        
+        <li>TCP port 1433 and UDP port 1434 — Microsoft SQL Server</li>
+        </ul>
+        
+    </div>
+    <div class="col-md-4"></div>
+  </div>
+
+ 
+  </div>
+  
+  
+  
+  
+  {% endblock %}
+  
+  

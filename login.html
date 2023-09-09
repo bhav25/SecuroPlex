@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css'%}">
+	<link rel="stylesheet" type="text/css" href="{% static 'icofont/icofont.min.css'%}">
+</head>
+<body>
+	<div class="container-fluid bg-gradient">
+		<div class="container">
+			<div class="row pt-5 pb-5">
+				<div class="col-1 "></div>
+				<div class="col-5 ps-5 ">
+					<img src={% static "images/register3.jpg" %} height="100%" width="105%">
+				</div>
+				<div class="col-5 bg-dark text-light p-5">
+					<form action="" method="POST">
+						<h1> Login/Sign Up </h1>
+						<br><br>
+						<input type="email" name="us"  required class="form-control bg-transparent text-light" style="border:none; border-bottom: 1px solid white;"placeholder="email"><br>
+						<input type="Password" name="pw" required class="form-control bg-transparent text-light"style="border:none; border-bottom: 1px solid white;" placeholder="Password"><br>
+						{% if formpost %}
+						Invalid details or your account is not created yet
+						{% endif %}
+						{% csrf_token %} <br> <br>
+						<div class="text-center"><input type="submit" value="Login" class="text-light rounded-pill btn btn-danger ps-5 btn-lg pe-5"></div> <br>
+						<p class="text-light text-center"> New User <a href="{% url 'Register' %}">Click Here </a>To Sign Up</p> <br>
+						<p class="text-light text-center"> Forget Password <a href="{% url 'Forgetpassword' %}">Click Here </a></p>
+					</form>
+			</div>
+			</div>
+		</div>
+		<div class="col-1"></div>
+	</div>
+{% endblock %}
+</body>
+</html>

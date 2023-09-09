@@ -1,0 +1,29 @@
+{% extends 'main.html' %}
+{% block content %}
+{% load static %}
+
+<div class="container">
+    <div class="row">
+        <div class="col-3"></div>
+        <div class="col-6 text-center p-2 ">
+            <h1 style="color: purple; font-family: 'Arial black';"><b>VIRUS SCAN</b></h1>
+            <br> <br> 
+            <form action="" method="POST" enctype="multipart/form-data">
+                {%csrf_token %} 
+                <label> Upload a File </label><br>
+                <input type="file" name="sentFile"  class="form-control">
+                <br><br>
+
+                <input type="submit" value="Scan" class="text-light text-center btn ps-5 btn-lg pe-5" style="background-color: purple;"><br>
+
+            </form>
+        </div>
+        <div class="col-3"> </div>
+    </div>
+</div>
+
+
+
+
+
+{% endblock %}

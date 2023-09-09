@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+
+<div class="row p-3 bg-light">
+    <div class="col-4"></div>
+    <div class="col-4 p-5">
+        <h1 class="text-center"><b>Cyber Tips</b></h1>
+        <br>
+        <p class="text-center"> Home > Cyber Tips</p>
+    </div>
+     <div class="col-4"></div>
+</div>
+
+<div class="container">
+    {% for i in data %}
+    <div class="row">
+        <div class="col-12 p-5 text-light">
+            <h1 style="color: purple;"><b> {{i.title}} </b></h1> <hr>
+            <p> {{i.description|linebreaks}} </p>
+    
+        </div>
+    </div>
+    {% endfor %}
+    </div>
+    
+    
+
+{% endblock %}

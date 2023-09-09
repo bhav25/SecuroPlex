@@ -1,0 +1,42 @@
+{% extends 'main.html' %}
+{% block content %}
+{% load static %}
+
+<div class="container">
+    <div class="row">
+        <div class="col-3"></div>
+        <div class="col-6 text-center p-2 ">
+            <h1 style="color: purple; font-family: 'Arial black';"><b>DOMAIN SCAN</b></h1>
+            <br> <br> 
+
+        </div>
+        <div class="col-3"> </div>
+    </div>
+</div>
+
+
+<div class="content-inner">
+    <div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-6"style="margin-top:30px;">
+    <div class="card">
+      <div class="card-header"style="background-color:purple;color:white;font-size:20px;">
+        ANTIVIRUS AND SCANS DETAILS OF DOMAIN
+      </div>
+      <div class="card-body">
+      <table>
+    {% for x in l %}
+    <tr>
+    <b>ANTIVIRUS NAME:</b> &nbsp;{{x.2}}<br>
+     <b>SCANS STATUS:</b> {{x.1}}<br>
+    </tr>
+    <br>
+    {% endfor %}
+    </table>
+        </div>
+    </div>
+    
+    </div>
+    </div>
+    </div>
+{% endblock %}

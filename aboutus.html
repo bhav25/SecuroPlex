@@ -1,0 +1,310 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.theme.min.css">
+
+<style> 
+	.testimonial{
+		border-left: 4px solid #001d4a;;
+		box-shadow: 5px 5px 6px rgba(0, 0, 0, 0.06);
+		padding: 30px 30px 30px 30px;
+		margin: 0 15px 30px 15px;
+		overflow: hidden;
+		position: relative;
+	}
+	.testimonial:before{
+		content: "";
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		border-top: 25px solid #001d4a;;
+		border-left: 25px solid transparent;
+		border-right: 25px solid transparent;
+		transform: rotate(-45deg);
+		transform-origin: 80% -30% 0;
+	}
+	.testimonial .pic{
+		display: inline-block;
+		width: 80px;
+		height: 80px;
+		border-radius: 50%;
+		overflow: hidden;
+		position: absolute;
+		top: 60px;
+		left: 20px;
+	}
+	.testimonial .pic img{
+		width: 100%;
+		height: 80px;
+	}
+	.testimonial .description{
+		font-size: 15px;
+		font-style: italic;
+		color: black;
+		line-height: 25px;
+		margin-bottom: 15px;
+	
+	}
+	.testimonial .title{
+		display: inline-block;
+		font-size: 20px;
+		font-weight: 700;
+		color: black;;
+		margin: 0;
+	}
+	.testimonial .post{
+		display: inline-block;
+		font-size: 17px;
+		color: #d45113;
+	}
+	.owl-theme .owl-controls .owl-page span{
+		border: 2px solid #d45113;
+		background: #fff;
+		opacity: 1;
+	}
+	.owl-theme .owl-controls .owl-page.active span,
+	.owl-theme .owl-controls .owl-page:hover span{
+		background: #d45113;
+	}
+	@media only screen and (max-width: 767px){
+		.testimonial{
+			padding: 20px;
+			text-align: center;
+		}
+		.testimonial .pic{
+			display: block;
+			position: static;
+			margin: 0 auto 15px;
+		}
+	}
+	a{text-decoration: none !important;}
+	</style>
+
+	<div class="row p-3 bg-light">
+		<div class="col-4"></div>
+		<div class="col-4 p-5">
+			<h1 class="text-center"><b>About Us</b></h1>
+			<br>
+			<p class="text-center"> Home > About Us</p>
+		</div>
+		 <div class="col-4"></div>
+	</div>
+	<div class="row pt-5 pb-5">
+		<div class="col-6 p-5">
+			<img src={% static "images/au1.png" %} width="100%">
+
+		</div>
+		<div class="col-6 text-light">
+			<h1 data-aos="fade-up"><b>Our Approach Is Simple But Not Time-Wasting</b></h1>
+			<p>Our aim is to secure your network and domain from external attacks by employing a variety of approaches and strategies. </p>
+			<br>
+			<div class="row border rounded shadow bg-light" data-aos="fade-left"  data-aos-duration="2000">
+				<div class="col-3 p-3">
+				    <img src={% static "images/icon1.svg " %} class=" bg-dark rounded-circle" width="80px" >
+				</div>
+				<div class="col-9 p-3 text-dark" >
+					<h3>Virus Scan</h3>
+					<p>Virus Scan aims to review and identify threatening viruses and programs by matching the viruses from its virus database with scanned data.</p>
+				</div>
+
+			</div>
+			<div class="row border mt-4 rounded shadow bg-light " data-aos="fade-left"  data-aos-duration="2000">
+				<div class="col-3 p-3">
+				    <img src={% static "images/icon2.svg" %} class=" bg-dark rounded-circle " width="80px" >	
+				</div>
+				<div class="col-9 p-3 text-dark" >
+					<h3>Port Scan</h3>
+					<p>Port Scan is a process that sends client requests to a range of server port addresses on a host, with the goal of finding an active port. </p>
+				</div>
+
+			</div>
+			<div class="row border mt-4 rounded shadow bg-light" data-aos="fade-left"  data-aos-duration="2000">
+				<div class="col-3 p-3">
+				    <img src={% static "images/icon3.svg" %} class=" bg-dark rounded-circle" width="80px" >
+				</div>
+				<div class="col-9 p-3 text-dark" >
+					<h3>Domain Scan</h3>
+					<p>Domain Scan check the security as well as goodwill of your website by the just entering the name of website. </p>
+				</div>
+
+			</div>
+		</div>
+		</div>
+			<div class="row ">
+			<div class=" col-12 mx-auto bg-light pt-3 pb-3"><h1 class="text-center" data-aos="fade-up"><b>Our Team Of Experts</b></h1>
+			<br> <p class="text-center ps-5 pe-5"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et <br> dolore magna aliqua. Ut enim ad minim.
+			</p>
+		</div>
+		<br> <br><br>
+        <div class="container">
+		<div class="row p-5">
+			<div class="col-4 text-center">
+				<div class="card rounded" style="width: 22rem;">
+                    <img src={% static "images\team1.jpg" %} class="card-img-top" alt="...">
+                    <div class="card-body">
+                    <h5 class="card-title text-center">David Conway</h5>
+                    <p class="card-text text-danger text-center">Security Lead</p>
+                    <i class="icofont-facebook border p-2 rounded-circle bg-dark text-light icofont-3px"> </i>
+			        <i class="icofont-twitter border p-2 rounded-circle bg-dark text-light icofont-3px"></i>
+			        <i class="icofont-instagram border p-2 rounded-circle bg-dark text-light icofont-3px"> </i>
+			        <i class="icofont-youtube border p-2 rounded-circle bg-dark text-light icofont-3px"></i>
+			        </div>
+                 </div>
+		    </div>
+			<div class="col-4 text-center ">
+				<div class="card rounded" style="width: 22rem;">
+                    <img src={% static "images\team2.jpg" %} class="card-img-top" alt="...">
+                    <div class="card-body">
+                    <h5 class="card-title text-center">Sarah Taylor</h5>
+                    <p class="card-text text-danger text-center">Developer</p>
+                    <i class="icofont-facebook border p-2  rounded-circle bg-dark text-light icofont-3px"> </i>
+			        <i class="icofont-twitter border p-2  rounded-circle bg-dark text-light icofont-3px"></i>
+			        <i class="icofont-instagram border p-2  rounded-circle bg-dark text-light icofont-3px"> </i>
+			        <i class="icofont-youtube border p-2  rounded-circle bg-dark text-light icofont-3px"></i>
+			        </div>
+                 </div>
+			</div>
+			<div class="col-4 text-center">
+				<div class="card rounded" style="width: 22rem;">
+                    <img src={% static "images\team3.jpg" %} class="card-img-top" alt="...">
+                    <div class="card-body">
+                    <h5 class="card-title text-center">Joe Root</h5>
+                    <p class="card-text text-danger text-center">CEO</p>
+                    <a href="https://www.facebook.com" target="_blank"><i class="icofont-facebook border p-2  rounded-circle bg-dark text-light icofont-3px"> </i></a>
+			        <a href="https://www.twitter.com" target="_blank"><i class="icofont-twitter border p-2   rounded-circle bg-dark text-light icofont-3px"></i></a>
+			        <a href="https://www.instagram.com" target="_blank"><i class="icofont-instagram border p-2  rounded-circle bg-dark text-light icofont-3px"> </i></a>
+			        <a href="https://www.youtube.com" target="_blank"><i class="icofont-youtube border p-2  rounded-circle bg-dark text-light icofont-3px"></i> </a>
+			        </div>
+                 </div>
+			</div>
+			
+		</div>
+		</div>
+
+		<div class="container-fluid" style="background-image: url({% static 'images/feedback-bg.jpg' %});background-size: cover;">
+		<div class="row ">
+			<div class=" col-12 text-light p-5"><h1 class="text-center" data-aos="fade-up"><b>Our Trusted Clients Feedback</b></h1>
+			<br> 
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div id="testimonial-slider3" class="owl-carousel">
+						<div class="testimonial bg-light">
+							<div class="description" style="width: 100%">
+								<p>Good Website with some decent new blogs and detail information about Cyber Attacks and Threats.</p>
+								<img src={% static "images/user1.jpg" %} height="80px" class="rounded-circle">
+								   <h3 class="title">Jessica Lora</h3>
+								<small class="post">TV Model</small>
+							</div>
+						</div>
+						<div class="testimonial bg-light">
+							<div class="description" style="width: 100%">
+								<p>It is a very good website for Cyber Security Students who are just pursuing in Cyber Security Field ,the UI and all the staff is proficient .</p>
+								<img src={% static "images/user2.jpg" %} height="80px" class="rounded-circle">
+								<h3 class="title">David Warmer</h3>
+								<small class="post">Sales Executive</small>
+							</div>
+						</div>
+						<div class="testimonial bg-light">
+							<div class="description" style="width: 100%">
+								<p>Nowadays there are so many hackers in the market but with the help of this website, I learn about Cyber Security and it is really helpful for me. </p>
+								<img src={% static "images/user3.jpg" %} height="80px" class="rounded-circle">
+								<h3 class="title">James Andy</h3>
+								<small class="post">Librarian</small>
+							</div>
+						</div>
+						<div class="testimonial bg-light">
+							<div class="description" style="width: 100%">
+								<p>The website is quite interesting as it include all the essential elements of Cyber Security.</p>
+								<img src={% static "images/user4.jpg" %} height="80px" class="rounded-circle">
+								<h3 class="title">Joe Root</h3>
+								<small class="post">Executive Assistant</small>
+							</div>
+						</div>
+						<div class="testimonial bg-light">
+							<div class="description" style="width: 100%">
+								<p>This website is very helpful as it provides all important information like Cyber cell near me,Helplines numbers ,Lawyers and various Cyber Crimes.</p>
+								<img src={% static "images/user5.jpg" %} height="80px" class="rounded-circle">
+								<h3 class="title">Sarah Taylor</h3>
+								<small class="post">Secretary</small>
+						   </div>
+						</div>
+						<div class="testimonial bg-light">
+							<div class="description" style="width: 100%">
+								<p>The features of scanning are good and Website layout is clean ,impressive and intuitive.</p>
+								<img src={% static "images/user6.jpg" %} height="80px" class="rounded-circle">
+								<h3 class="title">Amy Jones</h3>
+								<small class="post">Software Engineer</small>
+							</div>
+						</div>
+					</div>
+		</div>
+		</div>
+	</div>
+	</div>
+	</div>	
+
+	<div class="container-fluid" style="background-image: url({% static 'images/web-bg2.jpg' %});background-size: cover;">
+		<div class="row text-light">
+			<div class="col-6 p-5">
+				<h1 data-aos="fade-up"><b>Complete Website Security</b></h1><br>
+				<p>Follow our proven website security best practices to ensure your site and data are secure.</p><br><br>
+				<div class="row">
+					<div class="col-6">
+						
+						<i class="icofont-check-alt border  p-2 rounded-circle cur"></i>Malware Detection Removal <br><br>
+						<i class="icofont-check-alt border p-2 rounded-circle cur"></i>
+						Content Delivery Network<br><br>
+						<i class="icofont-check-alt border p-2 rounded-circle cur "></i>
+						Security Management<br><br>
+						<i class="icofont-check-alt border p-2 rounded-circle cur"></i>
+						vulnerability Analysis<br><br>
+						<i class="icofont-check-alt border p-2 rounded-circle cur"></i>
+						Website Hack Repair
+					</div>
+					<div class="col-6">
+						<i class="icofont-check-alt border  p-2 rounded-circle cur"></i>
+						Managing Cloud Security<br><br>
+						<i class="icofont-check-alt border p-2 rounded-circle cur"></i>
+						Testing Cyber Security<br><br>
+						<i class="icofont-check-alt border p-2 rounded-circle cur "></i>
+						Identifying Threats<br><br>
+						<i class="icofont-check-alt border p-2 rounded-circle cur"></i>
+						Server Security<br><br>
+						<i class="icofont-check-alt border p-2 rounded-circle cur"></i>
+						24/7 Security Support
+					</div>
+				</div>	
+			</div>
+			<div class="col-6 p-5 ">
+				<img src={% static "images/web.png" %} width="100%">
+			</div>
+			</div>
+		</div>
+	
+		</div>	
+	</div>
+	
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"></script>
+ <script>
+$(document).ready(function(){
+    $("#testimonial-slider3").owlCarousel({
+        items:3,
+        itemsDesktop:[800,2],
+        itemsDesktopSmall:[990,1],
+        itemsTablet:[768,1],
+        pagination:true,
+        navigation:false,
+        navigationText:["",""],
+        slideSpeed:1000,
+        autoPlay:true
+    });
+});
+</script>
+{% endblock %}
